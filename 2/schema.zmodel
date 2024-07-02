@@ -1,0 +1,23 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Trade {
+  id        Int    @id @default(autoincrement())
+  type      String @regex("sell|buy", "Type must be 'sell' or 'buy'")
+  user_id   Int
+  symbol    String
+  shares    Int    @gte(1) @lte(100)
+  price     Int
+  timestamp BigInt
+
+  @@allow('all', true)
+}
