@@ -9,7 +9,7 @@
     "test": "cross-env PORT=8001 ./node_modules/.bin/mocha --reporter mocha-multi-reporters --reporter-options configFile=config.json --exit"
   },
   "dependencies": {
-    "@prisma/client": "^5.16.1",
+    "@prisma/client": "5.15.1",
     "@zenstackhq/runtime": "2.2.4",
     "chai": "^4.3.7",
     "chai-http": "^4.3.0",
@@ -25,7 +25,7 @@
   "devDependencies": {
     "bluebird": "^3.7.2",
     "cross-env": "^7.0.3",
-    "prisma": "^5.16.1",
+    "prisma": "5.15.1",
     "zenstack": "2.2.4"
   }
 }
